@@ -15,11 +15,11 @@ import javax.validation.Payload;
 
 @Target( { METHOD, FIELD, TYPE, ANNOTATION_TYPE , PARAMETER})
 @Retention(RUNTIME)
-@Repeatable(value = MyChecks.class) // type of the container annotation
-@Constraint(validatedBy = BasicCarValidator.class)
-public @interface MyCheck {
+@Repeatable(CheckCars.class) // type of the container annotation
+@Constraint(validatedBy = CarValidator.class)
+public @interface CheckCar {
 
-    String message() default "This type is temporaly unavailable!";
+    String message() default "Validation failed!";
 
     Class<?>[] groups() default {};
 

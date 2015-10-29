@@ -20,18 +20,19 @@ public class ValidationServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         out = response.getOutputStream();
         out.println("<HTML><HEAD></HEAD><BODY>");
-        out.println("<h3>CDI Bean Validation @Repeatable</h3><br/>");
+        out.println("<h3>Bean Validation @Repeatable</h3><br/>");
         
-        placeOrder("VW Golf IV");
-        placeOrder("Peugeot 205 GTI");
-        placeOrder("Skoda Supperb");
-        placeOrder("Renault Espace Initiale");
-        placeOrder("Audi RS8");
+        placeOrder(new Car("Audi", "A6 1.9 TDi", "11YUT3"));
+        placeOrder(new Car("Peugeot", "208 GTI", "POL654"));
+        placeOrder(new Car("VW", "Golf+ 1.9", "234PMO"));
+        placeOrder(new Car("Renault", "Espace Intiale", "123RTB"));
+        placeOrder(new Car("Skoda", "Superb", "XYZ123"));
         
         out.println("</BODY></HTML>");
     }
 
-    private void placeOrder(String car) throws IOException {
+    private void placeOrder(Car car) throws IOException {
+
         try {
             out.println(aSupplier.order(car));
         } catch (Exception e) {

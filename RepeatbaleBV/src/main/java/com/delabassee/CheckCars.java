@@ -16,6 +16,6 @@ import java.lang.annotation.Target;
 
 @Target( { METHOD, FIELD, TYPE, ANNOTATION_TYPE , PARAMETER })
 @Retention(RUNTIME)
-public @interface MyChecks {
-    MyCheck[] value() default{}; ;
+public @interface CheckCars {
+    CheckCar[] value() default{}; ;
 }
