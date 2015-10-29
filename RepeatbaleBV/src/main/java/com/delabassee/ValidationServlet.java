@@ -27,6 +27,7 @@ public class ValidationServlet extends HttpServlet {
         placeOrder(new Car("VW", "Golf+ 1.9", "234PMO"));
         placeOrder(new Car("Renault", "Espace Intiale", "123RTB"));
         placeOrder(new Car("Skoda", "Superb", "XYZ123"));
+        placeOrder(new Car("VW", "Passat", "PAS765"));
         
         out.println("</BODY></HTML>");
     }

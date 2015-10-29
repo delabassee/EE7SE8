@@ -13,7 +13,8 @@ import javax.validation.Payload;
  * @author davidd
  */
 
-@Target( { METHOD, FIELD, TYPE, ANNOTATION_TYPE , PARAMETER})
+//@Target( { METHOD, FIELD, TYPE, ANNOTATION_TYPE , PARAMETER})
+@Target( { PARAMETER})
 @Retention(RUNTIME)
 @Repeatable(CheckCars.class) // type of the container annotation
 @Constraint(validatedBy = CarValidator.class)

@@ -14,7 +14,8 @@ import java.lang.annotation.Target;
  * @author davidd
  */
 
-@Target( { METHOD, FIELD, TYPE, ANNOTATION_TYPE , PARAMETER })
+//@Target( { METHOD, FIELD, TYPE, ANNOTATION_TYPE , PARAMETER })
+@Target( { PARAMETER })
 @Retention(RUNTIME)
 public @interface CheckCars {
     CheckCar[] value() default{}; ;
